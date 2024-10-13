@@ -1,5 +1,5 @@
 # PowerShell の色を変更する.
-![samnume](./samnume.png)
+![samnume](./samune.png)
 ```
 "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 ```
