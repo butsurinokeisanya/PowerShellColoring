@@ -1,22 +1,24 @@
 # PowerShell の文字の色を変更する.
+
+
 ![samnume](./samune.png)
-```
-"$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
-```
-を開く. なければ次に示すように新規作成する.
 
+## 手順
+PowerShellのカレントディレクトリに色がついていたら便利である. 色を付ける手順について詳述する.
+次のフォルダに添付のps1ファイルを入れる.
+```
+"$HOME\Documents\WindowsPowerShell"
+```
 
+もし, PowerShell Coreを使っている場合は次のフォルダである.
 ```bash
-notepad $PROFILE
+"$HOME\Documents\PowerShell"
 ```
-を実行するとnotepadが開かれる. 
 
-もし, PowerShell Coreを使っている場合は, 
-```bash
-"$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-```
-を新規作成する. 
+以上
 
+## 補足
+ps1ファイルの中身を次に示す.
 ```bash
 function prompt {
     $currentPath = $(Get-Location)
@@ -25,4 +27,5 @@ function prompt {
     return "$ "
 }
 ```
-をメモ帳に貼って保存する.
+色を付けるようになっている. このps1ファイルはpowershellが起動するたびに実行される. 
+powershellであらかじめ実行したいことがある場合はこのファイルに追記するとよい.
